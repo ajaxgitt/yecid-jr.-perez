@@ -26,14 +26,9 @@ src/
 
 ```bash
 # Clonar el repo
-git clone https://github.com/ajaxgitt/cv.git
+git clone https://github.com/ajaxgitt/yecid-jr.-perez.git
 cd cv
 
-# Instalar dependencias
-npm install
-
-# Dependencias necesarias si no las tenés
-npm install framer-motion lucide-react
 ```
 
 ---
@@ -41,7 +36,7 @@ npm install framer-motion lucide-react
 ## Desarrollo
 
 ```bash
-npm run dev
+pnpm dev
 ```
 
 ---
