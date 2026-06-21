@@ -1,75 +1,99 @@
-# React + TypeScript + Vite
+# CV — Yecid Junior Perez Paucara
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfolio/CV personal construido con React, TypeScript, Tailwind CSS y Framer Motion.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- **React 18** + **TypeScript**
+- **Tailwind CSS** — estilos utility-first
+- **Framer Motion** — animaciones de entrada por scroll
+- **Lucide React** — iconografía
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Estructura del proyecto
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+└── CVYecidPerez.tsx   # Componente principal (todo en un solo archivo)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Instalación
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# Clonar el repo
+git clone https://github.com/ajaxgitt/cv.git
+cd cv
+
+# Instalar dependencias
+npm install
+
+# Dependencias necesarias si no las tenés
+npm install framer-motion lucide-react
 ```
+
+---
+
+## Desarrollo
+
+```bash
+npm run dev
+```
+
+---
+
+## Características
+
+- **Navbar fijo** con scroll spy — resalta la sección activa automáticamente
+- **Animaciones por scroll** — cada sección aparece con `fadeUp` al entrar al viewport usando `useInView` de Framer Motion
+- **Navbar adaptativo** — transparente al inicio, opaco con blur al hacer scroll
+- **Diseño dark** — paleta `slate` + acentos en `blue-400`
+- **Responsive** — el navbar colapsa a íconos en mobile
+- **100% tipado** — interfaces definidas para todas las estructuras de datos
+
+---
+
+## Uso
+
+Importá el componente en tu `App.tsx`:
+
+```tsx
+import CVYecid from "./CVYecidPerez";
+
+export default function App() {
+  return <CVYecid />;
+}
+```
+
+Asegurate de tener Tailwind configurado en tu proyecto. Si usás Vite:
+
+```bash
+npm create vite@latest mi-cv -- --template react-ts
+cd mi-cv
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+---
+
+## Personalización
+
+Todos los datos están definidos como arrays de objetos tipados dentro del componente, fáciles de editar:
+
+| Variable | Contenido |
+|---|---|
+| `NAV_SECTIONS` | Secciones del navbar |
+| `experiences` | Experiencia laboral |
+| `sherlockFeatures` | Features de Sherlock |
+| `uniProjects` | Proyectos universitarios |
+| `skillGroups` | Habilidades técnicas por categoría |
+
+---
+
+## Licencia
+
+MIT — libre para usar y modificar.
