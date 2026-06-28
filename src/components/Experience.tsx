@@ -2,10 +2,7 @@ import { Pill } from "@/components/Pill"
 import Section from "@/components/Section"
 import SectionLabel from "@/components/SectionLabel"
 import { experiences } from "@/constants"
-import {
-    Briefcase
-} from "lucide-react"
-
+import { Briefcase } from "lucide-react"
 
 const Experience = () => {
   return (
@@ -26,12 +23,17 @@ const Experience = () => {
             <p className="text-sm text-slate-400 leading-relaxed mb-3">
               {exp.desc}
             </p>
-            <div className="flex flex-wrap gap-1.5">
-              {exp.pills.map((p) => (
-                <Pill key={p} sm>
-                  {p}
-                </Pill>
-              ))}
+            <div className="flex  flex-wrap gap-1.5">
+              {exp.pills.map((p, index) => {
+                return (
+                  <Pill key={index} sm>
+                    <div className="flex items-center gap-2">
+                      <p.icon width="10" height="10" />
+                      {p.language}
+                    </div>
+                  </Pill>
+                )
+              })}
             </div>
           </div>
         ))}

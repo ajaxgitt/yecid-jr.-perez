@@ -4,6 +4,14 @@ import SectionLabel from "@/components/SectionLabel"
 import { StatCard } from "@/components/StatCard"
 import { sherlockFeatures, uniProjects } from "@/constants"
 import { Check, ExternalLink, Rocket } from "lucide-react"
+import {
+  DockerSvg,
+  FastAPISvg,
+  PostgreSQLSvg,
+  ReactSvg,
+  TailwindSvg,
+  TypescriptSvg,
+} from "./LanguagesSvg"
 const Projects = () => {
   return (
     <Section id="proyectos">
@@ -12,9 +20,14 @@ const Projects = () => {
         <div className="bg-black border border-blue-900/40 rounded-xl p-5">
           <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
             <div className="flex items-center gap-2">
-              <h3 className="flex items-center gap-2 text-base font-medium text-slate-100"> 
-                <img src="https://sherlock-ts.vercel.app/svg/log.svg" alt="logo sherlock" className="h-4" />
-                  Sherlock</h3>
+              <h3 className="flex items-center gap-2 text-base font-medium text-slate-100">
+                <img
+                  src="https://sherlock-ts.vercel.app/svg/log.svg"
+                  alt="logo sherlock"
+                  className="h-4"
+                />
+                Sherlock
+              </h3>
               <span className="text-[11px] text-blue-400 bg-blue-900/25 border border-blue-800/40 px-2 py-0.5 rounded-full">
                 v4.0.0
               </span>
@@ -28,7 +41,6 @@ const Projects = () => {
               >
                 <ExternalLink size={12} /> Demo
               </a>
-           
             </div>
           </div>
 
@@ -59,15 +71,36 @@ const Projects = () => {
 
           <div className="flex flex-wrap gap-1.5">
             {[
-              "React",
-              "TypeScript",
-              "Tailwind CSS",
-              "FastAPI",
-              "PostgreSQL",
-              "Docker",
+              {
+                lan: "React",
+                icon: ReactSvg,
+              },
+              {
+                lan: "TypeScript",
+                icon: TypescriptSvg,
+              },
+              {
+                lan: "Tailwind CSS",
+                icon: TailwindSvg,
+              },
+              {
+                lan: "FastAPI",
+                icon: FastAPISvg,
+              },
+              {
+                lan: "PostgreSQL",
+                icon: PostgreSQLSvg,
+              },
+              {
+                lan: "Docker",
+                icon: DockerSvg,
+              },
             ].map((p) => (
-              <Pill key={p} sm>
-                {p}
+              <Pill key={p.lan} sm>
+                <div className="flex items-center gap-2">
+                  <p.icon width="14" height="14" />
+                  {p.lan}
+                </div>
               </Pill>
             ))}
           </div>
@@ -99,11 +132,17 @@ const Projects = () => {
                   {proj.desc}
                 </p>
                 <div className="flex gap-1 flex-wrap">
-                  {proj.pills.map((p) => (
-                    <Pill key={p} sm>
-                      {p}
-                    </Pill>
-                  ))}
+                  {proj.pills?.map((p, index) => {
+                    console.log(p)
+                    return (
+                      <Pill key={index} sm>
+                        <div className="flex items-center gap-2">
+                          <p.icon width="14" height="14" />
+                          {p.lang}
+                        </div>
+                      </Pill>
+                    )
+                  })}
                 </div>
               </div>
             ))}
