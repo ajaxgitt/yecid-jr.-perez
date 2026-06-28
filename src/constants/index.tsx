@@ -1,4 +1,17 @@
-import type { ExpItem, NavSection, SkillGroup, UniProject } from "@/types"
+import {
+  DjangoSvg,
+  DockerSvg,
+  FastAPISvg,
+  GitHubSvg,
+  GitSvg,
+  JavaScriptSvg,
+  PostgreSQLSvg,
+  PythonSvg,
+  ReactSvg,
+  TailwindSvg,
+  TypescriptSvg,
+} from "@/components/LanguagesSvg"
+import type { ExpItem, NavSection, UniProject } from "@/types"
 import { Briefcase, Code2, GraduationCap, Rocket, User } from "lucide-react"
 
 export const NAV_SECTIONS: NavSection[] = [
@@ -57,17 +70,64 @@ export const uniProjects: UniProject[] = [
   },
 ]
 
-export const skillGroups: SkillGroup[] = [
+export const skillGroups = [
   {
     cat: "Frontend — principal",
-    skills: ["JavaScript", "TypeScript", "React", "Tailwind CSS"],
+    skills: [
+      {
+        language: "JavaScript",
+        icon: JavaScriptSvg,
+      },
+      {
+        language: "TypeScript",
+        icon: TypescriptSvg,
+      },
+      {
+        language: "React",
+        icon: ReactSvg,
+      },
+      {
+        language: "Tailwind CSS",
+        icon: TailwindSvg,
+      },
+    ],
   },
   {
     cat: "Backend — nociones prácticas",
-    skills: ["Python", "FastAPI", "Django", "PostgreSQL"],
+    skills: [
+      {
+        language: "Python",
+        icon: PythonSvg,
+      },
+      {
+        language: "FastAPI",
+        icon: FastAPISvg,
+      },
+      {
+        language: "Django",
+        icon: DjangoSvg,
+      },
+      {
+        language: "PostgreSQL",
+        icon: PostgreSQLSvg,
+      },
+    ],
   },
   {
     cat: "Infraestructura y herramientas",
-    skills: ["Docker", "Git", "GitHub", "Vercel"],
+    skills: [
+      {
+        language: "Docker",
+        icon: DockerSvg,
+      },
+      {
+        language: "Git",
+        icon: GitSvg,
+      },
+      {
+        language: "GitHub",
+        icon: GitHubSvg,
+      },
+    ],
   },
 ]

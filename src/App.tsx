@@ -11,6 +11,7 @@ import Skills from "./components/Skills"
 const App = () => {
   return (
     <div className="min-h-screen  bg-black text-slate-300 font-sans">
+
       <Navbar />
       <Header />
 
@@ -19,14 +20,21 @@ const App = () => {
           <SectionLabel icon={<User size={14} />}>Perfil</SectionLabel>
           <p className="text-sm text-slate-400 leading-relaxed">
             Frontend specialist con sólido dominio de React y TypeScript,
-            cursando el 8vo semestre de Ingeniería en Sistemas en UNIFRANZ Santa
+            cursando el 9no semestre de Ingeniería en Sistemas en UNIFRANZ Santa
             Cruz. A lo largo de proyectos reales para clientes de distintos
             sectores adquirí nociones prácticas de backend, infraestructura y
             despliegue en producción. Fundador de{" "}
-            <a href="https://sherlock-ts.vercel.app/" target="_blank"  className="text-blue-400 cursor-pointer">Sherlock</a>, plataforma
-            educativa activa con más de 250 usuarios que me llevó a resolver
-            desafíos de arquitectura, servidores y ejecución segura de código.
-            Me muevo mejor en el frontend pero entiendo el sistema completo.
+            <a
+              href="https://sherlock-ts.vercel.app/"
+              target="_blank"
+              className="text-blue-400 cursor-pointer"
+            >
+              Sherlock
+            </a>
+            , plataforma educativa activa con más de 250 usuarios que me llevó a
+            resolver desafíos de arquitectura, servidores y ejecución segura de
+            código. Me muevo mejor en el frontend pero entiendo el sistema
+            completo.
           </p>
         </Section>
         <Experience />

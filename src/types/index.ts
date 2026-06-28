@@ -20,6 +20,8 @@ export interface UniProject {
 
 export interface SkillGroup {
   cat: string
-  skills: string[]
+  skills: {
+    language: string
+    icon: string
+  }[]
 }
-
