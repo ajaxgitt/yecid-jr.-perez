@@ -1,9 +1,12 @@
 import {
+  BootstrapSvg,
+  CssSvg,
   DjangoSvg,
   DockerSvg,
   FastAPISvg,
   GitHubSvg,
   GitSvg,
+  HtmlSvg,
   JavaScriptSvg,
   OpenCVSvg,
   PostgreSQLSvg,
@@ -86,8 +89,25 @@ export const uniProjects = [
     desc: "Creación, publicación y análisis de encuestas con resultados en tiempo real.",
     pills: [
       {
+        lang: "Python",
+        icon: PythonSvg,
+      },
+      {
         lang: "Django",
         icon: DjangoSvg,
+      },
+
+      {
+        lang: "Html",
+        icon: HtmlSvg,
+      },
+      {
+        lang: "Css",
+        icon: CssSvg,
+      },
+      {
+        lang: "Bootstrap",
+        icon: BootstrapSvg,
       },
     ],
   },
@@ -96,8 +116,24 @@ export const uniProjects = [
     desc: "Gestión de contactos, seguimiento de interacciones y reportes para equipos comerciales.",
     pills: [
       {
+        lang: "Python",
+        icon: PythonSvg,
+      },
+      {
         lang: "Django",
         icon: DjangoSvg,
+      },
+      {
+        lang: "Html",
+        icon: HtmlSvg,
+      },
+      {
+        lang: "Css",
+        icon: CssSvg,
+      },
+      {
+        lang: "Bootstrap",
+        icon: BootstrapSvg,
       },
     ],
   },
@@ -106,8 +142,24 @@ export const uniProjects = [
     desc: "Plataforma de compra/venta con catálogo de productos y gestión de usuarios.",
     pills: [
       {
+        lang: "Python",
+        icon: PythonSvg,
+      },
+      {
         lang: "Django",
         icon: DjangoSvg,
+      },
+      {
+        lang: "Html",
+        icon: HtmlSvg,
+      },
+      {
+        lang: "Css",
+        icon: CssSvg,
+      },
+      {
+        lang: "Bootstrap",
+        icon: BootstrapSvg,
       },
     ],
   },
@@ -116,12 +168,28 @@ export const uniProjects = [
     desc: "Identificación de personas mediante visión por computadora integrada en app web.",
     pills: [
       {
+        lang: "Python",
+        icon: PythonSvg,
+      },
+      {
         lang: "Django",
         icon: DjangoSvg,
       },
       {
         lang: "OpenCV",
         icon: OpenCVSvg,
+      },
+      {
+        lang: "Html",
+        icon: HtmlSvg,
+      },
+      {
+        lang: "Css",
+        icon: CssSvg,
+      },
+      {
+        lang: "Bootstrap",
+        icon: BootstrapSvg,
       },
     ],
   },

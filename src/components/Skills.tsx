@@ -15,7 +15,6 @@ const Skills = () => {
             <p className="text-[11px] text-slate-500 mb-2">{cat}</p>
             <div className="flex flex-wrap gap-2">
               {skills.map((s, index) => {
-                console.log(s)
                 return (
                   <span
                     key={index}

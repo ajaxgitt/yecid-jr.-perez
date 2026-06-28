@@ -8,6 +8,7 @@ import {
   DockerSvg,
   FastAPISvg,
   PostgreSQLSvg,
+  PythonSvg,
   ReactSvg,
   TailwindSvg,
   TypescriptSvg,
@@ -72,16 +73,20 @@ const Projects = () => {
           <div className="flex flex-wrap gap-1.5">
             {[
               {
-                lan: "React",
-                icon: ReactSvg,
-              },
-              {
                 lan: "TypeScript",
                 icon: TypescriptSvg,
               },
               {
+                lan: "React",
+                icon: ReactSvg,
+              },
+              {
                 lan: "Tailwind CSS",
                 icon: TailwindSvg,
+              },
+              {
+                lan: "Python",
+                icon: PythonSvg,
               },
               {
                 lan: "FastAPI",
@@ -133,13 +138,12 @@ const Projects = () => {
                 </p>
                 <div className="flex gap-1 flex-wrap">
                   {proj.pills?.map((p, index) => {
-                    console.log(p)
                     return (
                       <Pill key={index} sm>
-                        <div className="flex items-center gap-2">
+                        <button  title={p.lang} className="flex items-center justify-center gap-1 cursor-pointer">
                           <p.icon width="14" height="14" />
                           {p.lang}
-                        </div>
+                        </button>
                       </Pill>
                     )
                   })}
